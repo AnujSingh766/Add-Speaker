@@ -1,0 +1,59 @@
+.speaker-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.speaker-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.speaker-info {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-placeholder {
+  width: 40px;
+  height: 40px;
+  background-color: #ddd;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.speaker-details h4 {
+  margin: 0;
+}
+
+.speaker-details p {
+  margin: 5px 0 0 0;
+}
+
+.profile-icon {
+  color: #ddd; /* Customize as needed */
+  margin-right: 15px;
+}
+
+.edit-btn {
+  background: none;
+  border: none;
+  color: #e48360;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.edit-btn svg {
+  margin-right: 5px;
+}
+
+.select-speaker {
+  width: 20px;
+  height: 20px;
+}
