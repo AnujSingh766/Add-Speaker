@@ -1,17 +1,7 @@
 .speaker-list {
   display: flex;
   flex-direction: column;
-}
-
-.speaker-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  background-color: #fff;
-  border: 1px solid #eee;
-  border-radius: 10px;
-  margin-bottom: 10px;
+  /* background-color: white; */
 }
 
 .speaker-info {
@@ -19,41 +9,40 @@
   align-items: center;
 }
 
-.avatar-placeholder {
-  width: 40px;
-  height: 40px;
-  background-color: #ddd;
-  border-radius: 50%;
-  margin-right: 15px;
-}
-
 .speaker-details h4 {
   margin: 0;
 }
 
 .speaker-details p {
-  margin: 5px 0 0 0;
+  margin-top: 10px;
+}
+.separator {
+  margin: 0 30px; /* Adjust the spacing as needed */
 }
 
 .profile-icon {
-  color: #ddd; /* Customize as needed */
+  color: #b7b2b2; /* Customize as needed */
   margin-right: 15px;
+  margin-bottom: 50px;
 }
 
 .edit-btn {
   background: none;
   border: none;
-  color: #e48360;
+  color: #ed612e;
   display: flex;
   align-items: center;
   cursor: pointer;
+  margin-top: 20px;
 }
 
 .edit-btn svg {
-  margin-right: 5px;
+  margin-right: 10px;
+  
 }
 
+
 .select-speaker {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
 }

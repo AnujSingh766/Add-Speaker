@@ -1,33 +1,38 @@
-/* Sidebar container */
+body {
+  background-color: #666;
+}
+
 .sidebar {
   position: fixed;
   top: 0;
   right: 0;
-  max-width: 600px; 
-  border-radius: 10px;
+  max-width: 700px;
   width: 100%;
   height: 100vh;
   background-color: #f8f9fa;
   box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+  border-radius: 20px 0 0 20px;
   display: flex;
   flex-direction: column;
+  overflow: hidden; /* Prevent overflow outside the rounded edges */
 }
 
-/* Sidebar header fixed at the top */
+/* Sidebar header with close button */
 .sidebar-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #fff;
+  background-color: #f6f8f8;
   border-bottom: 1px solid #ddd;
   position: sticky;
   top: 0;
   z-index: 1;
+  border-radius: 20px 0 0 0; /* Add a top-left corner radius */
 }
 
-/* Close button */
+/* Close button styling */
 .close-btn {
   background: none;
   border: none;
@@ -35,36 +40,44 @@
   cursor: pointer;
   color: #666;
 }
+.close-btn:hover {
+  color: black;
+}
 
-/* Search bar with search icon inside */
+/* Search bar with icon inside */
 .sidebar-search {
   position: relative;
   display: flex;
+  margin: 10px;
   align-items: center;
-  padding: 10px 20px;
+  padding: 20px 25px;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
   position: sticky;
-  top: 60px; /* Adjust according to header height */
+  top: 60px;
   z-index: 1;
 }
 
 .sidebar-search input {
   width: 100%;
-  padding: 10px 40px 10px 10px; /* Adjust padding to make space for the icon */
+  padding: 10px 10px 10px 40px;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 12px;
   font-size: 14px;
+}
+
+input:focus {
+  outline: none;
 }
 
 .search-icon {
   position: absolute;
-  left: 30px; /* Position the icon inside the input */
-  color:#ff6347;
+  left: 30px;
+  color: #ff6347;
   font-size: 16px;
 }
 
-/* Scrollable content area for speakers */
+/* Scrollable speaker content */
 .sidebar-content {
   padding: 20px;
   overflow-y: auto;
@@ -72,12 +85,13 @@
   background-color: #f8f9fa;
 }
 
-/* Highlighting selected speakers */
+/* Styling for speaker items */
 .speaker-item {
   padding: 10px;
-  margin-bottom: 8px;
+  margin: 20px;
+  height: 150px;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -85,20 +99,27 @@
 }
 
 .speaker-item.selected {
-  background-color: #e0f7fa;
-  border-color: #00bcd4;
+  border-color: green;
 }
 
-/* Footer section */
+.speaker-item.selected .checkbox {
+  border-color: green;
+}
+.speaker-item.selected .select-speaker {
+  accent-color: green; /* Change the checkbox color for better visual feedback */
+}
+
+/* Footer with action buttons */
 .sidebar-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 20px 30px;
   background-color: #fff;
   border-top: 1px solid #ddd;
   position: sticky;
   bottom: 0;
+  z-index: 1;
 }
 
 .action-btn {
@@ -114,15 +135,20 @@
   color: #888;
 }
 
-.add-btn.active {
-  background-color: #4caf50;
-  color: #fff;
-  cursor: pointer;
+/* Add button when active */
+.action-btn.add-btn.active {
+  background-color: #ff6347;
+  color: white;
+}
+
+.action-btn.add-btn:disabled {
+  background-color: #d3d3d3;
 }
 
 .cancel-btn {
   background-color: #ffe0e0;
   color: #ff6347;
+  margin-right: 50%;
 }
 
 .create-btn {
@@ -132,3 +158,6 @@
   cursor: pointer;
   font-size: 14px;
 }
+
+
+

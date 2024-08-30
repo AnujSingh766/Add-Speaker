@@ -6,16 +6,16 @@
   justify-content: flex-start;
   align-items: flex-start;
   padding: 20px;
-  border-radius: 30px; /* Curved format */
+  border-radius: 15px; /* Curved format */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 1600px; /* Max width */
+  max-width: 1700px; /* Max width */
   margin: 0 auto; /* Center the page within the viewport */
 }
 
 /* Centering the container */
 .container {
   width: 100%;
-  max-width: 300px; /* Width limit for smaller screens */
+  max-width: 100px; /* Width limit for smaller screens */
 }
 
 /* Styling for the speaker section */
