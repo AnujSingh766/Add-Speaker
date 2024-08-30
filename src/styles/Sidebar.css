@@ -6,33 +6,34 @@ body {
   position: fixed;
   top: 0;
   right: 0;
-  max-width: 700px;
+  max-width: 600px;
   width: 100%;
   height: 100vh;
-  background-color: #f8f9fa;
+  background-color: white;
   box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  border-radius: 20px 0 0 20px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* Prevent overflow outside the rounded edges */
+  overflow: hidden;
 }
 
-/* Sidebar header with close button */
 .sidebar-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 8px;
   background-color: #f6f8f8;
   border-bottom: 1px solid #ddd;
   position: sticky;
   top: 0;
   z-index: 1;
-  border-radius: 20px 0 0 0; /* Add a top-left corner radius */
+  border-radius: 10px 10px 0 0; 
+}
+.sidebar-header h5{
+  margin: 5px;
 }
 
-/* Close button styling */
 .close-btn {
   background: none;
   border: none;
@@ -40,21 +41,19 @@ body {
   cursor: pointer;
   color: #666;
 }
+
 .close-btn:hover {
   color: black;
 }
 
-/* Search bar with icon inside */
 .sidebar-search {
   position: relative;
-  display: flex;
   margin: 10px;
-  align-items: center;
-  padding: 20px 25px;
+  padding: 10px;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
   position: sticky;
-  top: 60px;
+  top: 70px;
   z-index: 1;
 }
 
@@ -62,7 +61,7 @@ body {
   width: 100%;
   padding: 10px 10px 10px 40px;
   border: 1px solid #ddd;
-  border-radius: 12px;
+  border-radius: 10px;
   font-size: 14px;
 }
 
@@ -72,24 +71,22 @@ input:focus {
 
 .search-icon {
   position: absolute;
-  left: 30px;
+  margin-top: 12px;
+  left: 20px;
   color: #ff6347;
-  font-size: 16px;
+  font-size: 18px;
 }
 
-/* Scrollable speaker content */
 .sidebar-content {
-  padding: 20px;
+  padding: 10px;
   overflow-y: auto;
   flex-grow: 1;
-  background-color: #f8f9fa;
+  background-color: white;
 }
 
-/* Styling for speaker items */
 .speaker-item {
-  padding: 10px;
-  margin: 20px;
-  height: 150px;
+  padding: 15px;
+  margin : 11px;
   border: 1px solid #ddd;
   border-radius: 10px;
   cursor: pointer;
@@ -102,19 +99,16 @@ input:focus {
   border-color: green;
 }
 
-.speaker-item.selected .checkbox {
-  border-color: green;
-}
+
 .speaker-item.selected .select-speaker {
-  accent-color: green; /* Change the checkbox color for better visual feedback */
+  accent-color: green; 
 }
 
-/* Footer with action buttons */
 .sidebar-footer {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 20px 30px;
+  align-items: center;
+  padding: 5px;
   background-color: #fff;
   border-top: 1px solid #ddd;
   position: sticky;
@@ -131,11 +125,13 @@ input:focus {
 }
 
 .add-btn {
-  background-color: #e0e0e0;
-  color: #888;
+  background-color: #ff6347;
+  color: white;
+  margin: 10px;
+  font-size: 12px;
+  padding: 12px 24px;
+  border-radius: 10px;
 }
-
-/* Add button when active */
 .action-btn.add-btn.active {
   background-color: #ff6347;
   color: white;
@@ -148,7 +144,9 @@ input:focus {
 .cancel-btn {
   background-color: #ffe0e0;
   color: #ff6347;
-  margin-right: 50%;
+  font-size: 12px;
+  padding: 12px 24px;
+  border-radius: 10px;
 }
 
 .create-btn {
@@ -157,7 +155,33 @@ input:focus {
   color: #ff6347;
   cursor: pointer;
   font-size: 14px;
+  margin-left: auto;
 }
 
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    max-width: 100%;
+  }
 
+  .sidebar-footer {
+    flex-direction: column;
+    align-items: stretch; 
+    padding: 15px;
+  }
 
+  .action-btn {
+    width: 100%;
+    margin: 5px 0; 
+  }
+
+  .add-btn, .cancel-btn {
+    padding: 10px 20px;
+    width: 100%; 
+  }
+
+  .create-btn {
+    margin: 10px 0 0 0; 
+    width: 100%;
+  }
+}

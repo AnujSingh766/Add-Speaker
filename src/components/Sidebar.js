@@ -8,7 +8,7 @@ import '../styles/Sidebar.css';
 const Sidebar = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedSpeakers, setSelectedSpeakers] = useState([]);
-  const navigate = useNavigate(); // Initialize navigate
+  const navigate = useNavigate();
 
   const handleSearch = (event) => {
     setSearchTerm(event.target.value);
@@ -23,17 +23,17 @@ const Sidebar = () => {
     );
   };
 
-  // Check if the Add button should be active
+ 
   const isAddButtonActive = selectedSpeakers.length > 0;
 
   const handleClose = () => {
-    navigate('/'); // Navigate to Add Speaker page
+    navigate('/'); // navigate to addSpeaker
   };
 
   return (
     <div className="sidebar">
       <div className="sidebar-header">
-        <h2>Add Speaker</h2>
+        <h5>Add Speaker</h5>
         <button
           className="close-btn"
           onClick={handleClose}

@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/AddSpeaker.css';
 
@@ -7,7 +6,7 @@ const AddSpeaker = () => {
   const navigate = useNavigate();
 
   const handleAddSpeakerClick = () => {
-    navigate('/add-speaker'); // Navigate to the Sidebar directly
+    navigate('/add-speaker'); 
   };
 
 
